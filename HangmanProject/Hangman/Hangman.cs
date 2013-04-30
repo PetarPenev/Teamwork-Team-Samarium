@@ -5,8 +5,11 @@ class Hangman
     // tova go pisah vav vlaka kam pernik i super me cepi glavata, lele kvo imashe v tazi bira????
 
     private static Scoreboard scoreboard = new Scoreboard();
-    private static readonly string[] Words = new string[] { "computer", "programmer", "software", "debugger", "compiler", 
-        "developer", "algorithm", "array", "method", "variable"};
+    private static readonly string[] Words = new string[] 
+    { 
+        "computer", "programmer", "software", "debugger", "compiler", 
+        "developer", "algorithm", "array", "method", "variable"
+    };
 
     private static bool PlayOneGame()
     {
@@ -15,9 +18,6 @@ class Hangman
         string W = SelectRandomWord();
         char[] displayableWord = GenerateEmptyWordOfUnderscores(W.Length);
         int numberOfMistakesMade = 0;
-
-
-
 
         bool flag = false;
         bool ff = false;
