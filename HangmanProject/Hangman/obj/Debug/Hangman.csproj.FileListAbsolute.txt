@@ -4,3 +4,9 @@ D:\QualityCode\5\HangmanProject\Hangman\bin\Debug\Hangman.exe
 D:\QualityCode\5\HangmanProject\Hangman\bin\Debug\Hangman.pdb
 D:\QualityCode\5\HangmanProject\Hangman\obj\Debug\Hangman.exe
 D:\QualityCode\5\HangmanProject\Hangman\obj\Debug\Hangman.pdb
+D:\Teamwork\HangmanProject\Hangman\bin\Debug\Hangman.exe.config
+D:\Teamwork\HangmanProject\Hangman\obj\Debug\Hangman.exe
+D:\Teamwork\HangmanProject\Hangman\obj\Debug\Hangman.pdb
+D:\Teamwork\HangmanProject\Hangman\bin\Debug\Hangman.exe
+D:\Teamwork\HangmanProject\Hangman\bin\Debug\Hangman.pdb
+D:\Teamwork\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache

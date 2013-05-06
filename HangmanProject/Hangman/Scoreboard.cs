@@ -3,58 +3,60 @@ using System.Collections.Generic;
 
 class Scoreboard
 {
-    private const int MAX_NUMBER_OF_RECORDS = 5;
-    private List<KeyValuePair<int, String>> TopFiveRecords;
+    private const int MAX_NUMBER_OF_HIGH_SCORE_ENTRIES = 5;
+
+    private List<KeyValuePair<String, int>> highScoreList;
 
     public Scoreboard()
     {
-        this.TopFiveRecords = new List<KeyValuePair<int, string>>();
+        this.highScoreList = new List<KeyValuePair<String, int>>();
     }
 
     public void TryToSignToScoreboard(int numberOfMistakesMade)
     {
-        bool scoreQualifiesForTopFive = CheckIfScoreQualifiesForTopFive(numberOfMistakesMade);
-        if (scoreQualifiesForTopFive)
+        bool scoreQualifiesForHighScoreList = CheckIfScoreQualifiesForHighScoreList(numberOfMistakesMade);
+        if (scoreQualifiesForHighScoreList)
         {
             AddNewRecord(numberOfMistakesMade);
             PrintCurrentScoreboard();
         }
     }
 
-    private bool CheckIfScoreQualifiesForTopFive(int numberOfMistakesMade)
+    private bool CheckIfScoreQualifiesForHighScoreList(int numberOfMistakesMade)
     {
         bool scoreQualifiesForTopFive = false;
-        if (TopFiveRecords.Count < MAX_NUMBER_OF_RECORDS)
+        if (highScoreList.Count < MAX_NUMBER_OF_HIGH_SCORE_ENTRIES)
         {
             scoreQualifiesForTopFive = true;
         }
         else
         {
-            int worstScoreInTopFive = TopFiveRecords[MAX_NUMBER_OF_RECORDS - 1].Key;
+            int worstScoreInTopFive = highScoreList[MAX_NUMBER_OF_HIGH_SCORE_ENTRIES - 1].Value;
             if (numberOfMistakesMade < worstScoreInTopFive)
             {
                 scoreQualifiesForTopFive = true;
             }
         }
+
         return scoreQualifiesForTopFive;
     }
 
     private void AddNewRecord(int numberOfMistakesMade)
     {
-        if (TopFiveRecords.Count == MAX_NUMBER_OF_RECORDS)
+        if (highScoreList.Count == MAX_NUMBER_OF_HIGH_SCORE_ENTRIES)
         {
             DeleteTheWorstRecord();
         }
 
         string playerName = AskForPlayerName();
-        KeyValuePair<int, string> newRecord = new KeyValuePair<int, string>(numberOfMistakesMade, playerName);
-        TopFiveRecords.Add(newRecord);
+        KeyValuePair<string, int> newRecord = new KeyValuePair<string, int>(playerName, numberOfMistakesMade);
+        highScoreList.Add(newRecord);
         SortRecordsAscendingByScore();
     }
 
     private string AskForPlayerName()
     {
-        string name = "unknown";
+        string name = String.Empty;
         bool inputIsAcceptable = false;
         while (!inputIsAcceptable)
         {
@@ -74,37 +76,38 @@ class Scoreboard
                 inputIsAcceptable = true;
             }
         }
+
         return name;
     }
 
     private void DeleteTheWorstRecord()
     {
-        this.TopFiveRecords.RemoveAt(TopFiveRecords.Count - 1);
+        this.highScoreList.RemoveAt(highScoreList.Count - 1);
     }
 
     private void SortRecordsAscendingByScore()
     {
-        TopFiveRecords.Sort(CompareByKeys);
+        highScoreList.Sort(CompareByValue);
     }
 
-    private static int CompareByKeys(KeyValuePair<int, string> pairA, KeyValuePair<int, string> pairB)
+    private static int CompareByValue(KeyValuePair<string, int> pairA, KeyValuePair<string, int> pairB)
     {
-        return pairA.Key.CompareTo(pairB.Key);
+        return pairA.Value.CompareTo(pairB.Value);
     }
 
     public void PrintCurrentScoreboard()
     {
         Console.WriteLine("Scoreboard:");
-        if (TopFiveRecords.Count == 0)
+        if (highScoreList.Count == 0)
         {
             Console.WriteLine("There are no records in the scoreboard yet.");
         }
         else
         {
-            for (int index = 0; index < TopFiveRecords.Count; index++)
+            for (int index = 0; index < highScoreList.Count; index++)
             {
-                string name = TopFiveRecords[index].Value;
-                int mistakes = TopFiveRecords[index].Key;
+                string name = highScoreList[index].Key;
+                int mistakes = highScoreList[index].Value;
                 Console.WriteLine("{0}. {1} --> {2} mistakes", index + 1, name, mistakes);
             }
         }
