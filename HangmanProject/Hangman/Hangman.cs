@@ -14,7 +14,6 @@ class Hangman
     private static bool PlayOneGame()
     {
         PrintWelcomeMessage();
-
         string W = SelectRandomWord();
         char[] displayableWord = GenerateEmptyWordOfUnderscores(W.Length);
         int numberOfMistakesMade = 0;
