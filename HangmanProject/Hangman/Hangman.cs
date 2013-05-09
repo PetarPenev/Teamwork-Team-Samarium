@@ -6,6 +6,8 @@ namespace Hangman
     {
         // tova go pisah vav vlaka kam pernik i super me cepi glavata, lele kvo imashe v tazi bira????
 
+
+
         private Scoreboard scoreboard = new Scoreboard();
         private readonly string[] Words = new string[] 
         { 
