@@ -6,14 +6,29 @@ namespace Hangman
     {
         // tova go pisah vav vlaka kam pernik i super me cepi glavata, lele kvo imashe v tazi bira????
 
-        private static Scoreboard scoreboard = new Scoreboard();
-        private static readonly string[] Words = new string[] 
+        private Scoreboard scoreboard = new Scoreboard();
+        private readonly string[] Words = new string[] 
         { 
             "computer", "programmer", "software", "debugger", "compiler", 
             "developer", "algorithm", "array", "method", "variable"
         };
 
-        private static bool PlayOneGame()
+        private bool isCurrentGameOver = false;
+
+        public bool IsCurrentGameOver
+        {
+            get { return isCurrentGameOver; }
+            set { isCurrentGameOver = value; }
+        }
+
+        private bool isGameWon = false;
+
+        private bool isWholeGameOver = false;
+
+        private bool isHelpUsed = false;
+
+
+        private bool PlayOneGame()
         {
             DisplayUtilities.PrintWelcomeMessage();
 
@@ -21,11 +36,10 @@ namespace Hangman
             char[] displayableWord = WordUtilities.GenerateEmptyWordOfUnderscores(W.Length);
             int numberOfMistakesMade = 0;
 
-            bool flag = false;
-            bool ff = false;
-            bool ff2 = false;
+            this.isGameWon = false;
+            this.isHelpUsed = false;
 
-            while (!ff)
+            while (!this.isGameWon)
             {
                 DisplayUtilities.PrintDisplayableWord(displayableWord);
                 string command = String.Empty;
@@ -36,19 +50,19 @@ namespace Hangman
                 }
                 else
                 {
-                    ProcessCommand(command, W, displayableWord, out flag, out ff, out ff2);
+                    ProcessCommand(command, W, displayableWord);
                 }
 
-                bool gameIsWon = CheckIfGameIsWon(displayableWord, ff2, numberOfMistakesMade);
-                if (gameIsWon)
+                if (!this.isGameWon)
                 {
-                    ff = true;
+                    this.isGameWon = CheckIfGameIsWon(displayableWord, this.isHelpUsed, numberOfMistakesMade);
                 }
             }
-            return flag;
+
+            return this.isWholeGameOver;
         }
 
-        private static bool CheckIfGameIsWon(char[] displayableWord, bool helpIsUsed, int numberOfMistakesMade)
+        private bool CheckIfGameIsWon(char[] displayableWord, bool helpIsUsed, int numberOfMistakesMade)
         {
             bool wordIsRevealed = WordUtilities.CheckIfWordIsRevealed(displayableWord);
             if (wordIsRevealed)
@@ -70,36 +84,32 @@ namespace Hangman
             return wordIsRevealed;
         }
 
-        private static void ProcessCommand(string command, string secretWord, char[] displayableWord, out bool endOfAllGames,
-            out bool endOfCurrentGame, out bool helpIsUsed)
+        private void ProcessCommand(string command, string secretWord, char[] displayableWord)
         {
-            endOfCurrentGame = false;
-            endOfAllGames = false;
-            helpIsUsed = false;
             switch (command)
             {
                 case "top":
                     scoreboard.PrintCurrentScoreboard();
                     break;
                 case "restart":
-                    endOfCurrentGame = true;
-                    endOfAllGames = false;
+                    this.isGameWon = true;
+                    this.isWholeGameOver = false;
                     break;
                 case "exit":
                     Console.WriteLine("Goodbye!");
-                    endOfCurrentGame = true;
-                    endOfAllGames = true;
+                    this.isGameWon = true;
+                    this.isWholeGameOver = true;
                     break;
                 case "help":
                     DisplayUtilities.HelpByRevealingALetter(secretWord, displayableWord);
-                    helpIsUsed = true;
+                    this.isHelpUsed = true;
                     break;
                 default:
                     break;
             }
         }
         
-        private static void ProcessUserGuess(string suggestedLetter, string secretWord, char[] displayableWord,
+        private void ProcessUserGuess(string suggestedLetter, string secretWord, char[] displayableWord,
             ref int numberOfMistakesMade)
         {
             int NumberOfRevealedLetters = WordUtilities.CheckUserGuess(suggestedLetter, secretWord, displayableWord);
@@ -125,7 +135,7 @@ namespace Hangman
             }
         }
 
-        private static string GetUserInput(out string command)
+        private string GetUserInput(out string command)
         {
             string suggestedLetter = String.Empty;
             command = String.Empty;
@@ -169,10 +179,10 @@ namespace Hangman
 
         static void Main(string[] args)
         {
-            bool gamesAreOver = false;
-            while (!gamesAreOver)
+            Hangman hangman = new Hangman();
+            while (!hangman.IsCurrentGameOver)
             {
-                gamesAreOver = PlayOneGame();
+                hangman.IsCurrentGameOver = hangman.PlayOneGame();
                 Console.WriteLine();
             }
         }
