@@ -4,38 +4,37 @@ namespace Hangman
 {
     class Hangman
     {
-        // tova go pisah vav vlaka kam pernik i super me cepi glavata, lele kvo imashe v tazi bira????
-
-
-
-        private Scoreboard scoreboard = new Scoreboard();
-        private readonly string[] Words = new string[] 
+        private readonly Scoreboard scoreboard = new Scoreboard();
+        private readonly string[] words = new string[] 
         { 
             "computer", "programmer", "software", "debugger", "compiler", 
             "developer", "algorithm", "array", "method", "variable"
         };
 
+        private bool isGameWon = false;
+        private bool isWholeGameOver = false;
+        private bool isHelpUsed = false;
         private bool isCurrentGameOver = false;
 
         public bool IsCurrentGameOver
         {
-            get { return isCurrentGameOver; }
-            set { isCurrentGameOver = value; }
+            get
+            {
+                return this.isCurrentGameOver;
+            }
+
+            set
+            {
+                this.isCurrentGameOver = value;
+            }
         }
-
-        private bool isGameWon = false;
-
-        private bool isWholeGameOver = false;
-
-        private bool isHelpUsed = false;
-
 
         private bool PlayOneGame()
         {
             DisplayUtilities.PrintWelcomeMessage();
 
-            string W = WordUtilities.SelectRandomWord(Words);
-            char[] displayableWord = WordUtilities.GenerateEmptyWordOfUnderscores(W.Length);
+            string randomWord = WordUtilities.SelectRandomWord(this.words);
+            char[] displayableWord = WordUtilities.GenerateEmptyWordOfUnderscores(randomWord.Length);
             int numberOfMistakesMade = 0;
 
             this.isGameWon = false;
@@ -45,19 +44,19 @@ namespace Hangman
             {
                 DisplayUtilities.PrintDisplayableWord(displayableWord);
                 string command = String.Empty;
-                string suggestedLetter = GetUserInput(out command);
+                string suggestedLetter = this.GetUserInput(out command);
                 if (suggestedLetter != String.Empty)
                 {
-                    ProcessUserGuess(suggestedLetter, W, displayableWord, ref numberOfMistakesMade);
+                    this.ProcessUserGuess(suggestedLetter, randomWord, displayableWord, ref numberOfMistakesMade);
                 }
                 else
                 {
-                    ProcessCommand(command, W, displayableWord);
+                    this.ProcessCommand(command, randomWord, displayableWord);
                 }
 
                 if (!this.isGameWon)
                 {
-                    this.isGameWon = CheckIfGameIsWon(displayableWord, this.isHelpUsed, numberOfMistakesMade);
+                    this.isGameWon = this.CheckIfGameIsWon(displayableWord, this.isHelpUsed, numberOfMistakesMade);
                 }
             }
 
@@ -79,7 +78,7 @@ namespace Hangman
                 {
                     Console.WriteLine("You won with {0} mistakes.", numberOfMistakesMade);
                     DisplayUtilities.PrintDisplayableWord(displayableWord);
-                    scoreboard.TryToSignToScoreboard(numberOfMistakesMade);
+                    this.scoreboard.TryToSignToScoreboard(numberOfMistakesMade);
                 }
             }
 
@@ -91,7 +90,7 @@ namespace Hangman
             switch (command)
             {
                 case "top":
-                    scoreboard.PrintCurrentScoreboard();
+                    this.scoreboard.PrintCurrentScoreboard();
                     break;
                 case "restart":
                     this.isGameWon = true;
@@ -111,22 +110,21 @@ namespace Hangman
             }
         }
         
-        private void ProcessUserGuess(string suggestedLetter, string secretWord, char[] displayableWord,
-            ref int numberOfMistakesMade)
+        private void ProcessUserGuess(string suggestedLetter, string secretWord, char[] displayableWord, ref int numberOfMistakesMade)
         {
-            int NumberOfRevealedLetters = WordUtilities.CheckUserGuess(suggestedLetter, secretWord, displayableWord);
-            if (NumberOfRevealedLetters > 0)
+            int numberOfRevealedLetters = WordUtilities.CheckUserGuess(suggestedLetter, secretWord, displayableWord);
+            if (numberOfRevealedLetters > 0)
             {
                 bool wordIsRevealed = WordUtilities.CheckIfWordIsRevealed(displayableWord);
                 if (!wordIsRevealed)
                 {
-                    if (NumberOfRevealedLetters == 1)
+                    if (numberOfRevealedLetters == 1)
                     {
-                        Console.WriteLine("Good job! You revealed {0} letter.", NumberOfRevealedLetters);
+                        Console.WriteLine("Good job! You revealed {0} letter.", numberOfRevealedLetters);
                     }
                     else
                     {
-                        Console.WriteLine("Good job! You revealed {0} letters.", NumberOfRevealedLetters);
+                        Console.WriteLine("Good job! You revealed {0} letters.", numberOfRevealedLetters);
                     }
                 }
             }
@@ -176,6 +174,7 @@ namespace Hangman
                     DisplayUtilities.PrintInvalidEntryMessage();
                 }
             }
+
             return suggestedLetter;
         }
 
@@ -189,5 +188,4 @@ namespace Hangman
             }
         }
     }
-
 }
