@@ -8,11 +8,7 @@ namespace Hangman
         static void Main(string[] args)
         {
             Hangman hangman = Hangman.GetHangman();
-            while (!hangman.IsCurrentGameOver)
-            {
-                hangman.IsCurrentGameOver = hangman.PlayOneGame();
-                Console.WriteLine();
-            }
+            hangman.Play();
         }
     }
 }

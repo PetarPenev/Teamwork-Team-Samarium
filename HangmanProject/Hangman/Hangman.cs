@@ -51,7 +51,16 @@ namespace Hangman
             return instance;
         }
 
-        public bool PlayOneGame()
+        public void Play()
+        {
+            while (!this.IsCurrentGameOver)
+            {
+                this.IsCurrentGameOver = this.NewGame();
+                Console.WriteLine();
+            }
+        }
+
+        private bool NewGame()
         {
             DisplayUtilities.PrintWelcomeMessage();
 
@@ -87,8 +96,8 @@ namespace Hangman
 
         private bool CheckIfGameIsWon(char[] displayableWord, bool helpIsUsed, int numberOfMistakesMade)
         {
-            bool wordIsRevealed = WordUtilities.CheckIfWordIsRevealed(displayableWord);
-            if (wordIsRevealed)
+            bool isWon = WordUtilities.CheckIfWordIsRevealed(displayableWord);
+            if (isWon)
             {
                 if (helpIsUsed)
                 {
@@ -104,7 +113,7 @@ namespace Hangman
                 }
             }
 
-            return wordIsRevealed;
+            return isWon;
         }
 
         private void ProcessCommand(string command, string secretWord, char[] displayableWord)
@@ -167,26 +176,13 @@ namespace Hangman
                 Console.Write("Enter your guess or command: ");
                 string inputLine = Console.ReadLine();
                 inputLine = inputLine.ToLower();
-
-                if (inputLine.Length == 1)
+                InputType inputType = GetInputType(inputLine);
+                if (inputType == InputType.Letter)
                 {
-                    bool isLetter = char.IsLetter(inputLine, 0);
-                    if (isLetter)
-                    {
-                        suggestedLetter = inputLine;
-                        correctInputIsTaken = true;
-                    }
-                    else
-                    {
-                        DisplayUtilities.PrintInvalidEntryMessage();
-                    }
+                    suggestedLetter = inputLine;
+                    correctInputIsTaken = true;
                 }
-                else if (inputLine.Length == 0)
-                {
-                    DisplayUtilities.PrintInvalidEntryMessage();
-                }
-                else if ((inputLine == "top") || (inputLine == "restart") ||
-                    (inputLine == "help") || (inputLine == "exit"))
+                else if (inputType == InputType.Command)
                 {
                     command = inputLine;
                     correctInputIsTaken = true;
@@ -198,6 +194,27 @@ namespace Hangman
             }
 
             return suggestedLetter;
+        }
+
+        private InputType GetInputType(string input)
+        {
+            InputType type = InputType.Invalid;
+            bool isValidCommand = (input == "top") || (input == "restart") || (input == "help") || (input == "exit");
+
+            if (input.Length == 1)
+            {
+                bool isLetter = char.IsLetter(input, 0);
+                if (isLetter)
+                {
+                    type = InputType.Letter;
+                }
+            }
+            else if (isValidCommand)
+            {
+                type = InputType.Command;
+            }
+
+            return type;
         }
     }
 }
