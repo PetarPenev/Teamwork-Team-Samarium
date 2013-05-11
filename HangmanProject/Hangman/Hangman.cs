@@ -2,8 +2,10 @@
 
 namespace Hangman
 {
-    class Hangman
+    public class Hangman
     {
+        private static Hangman instance;
+        private static object syncRoot = new Object();
         private readonly Scoreboard scoreboard = new Scoreboard();
         private readonly string[] words = new string[] 
         { 
@@ -15,6 +17,10 @@ namespace Hangman
         private bool isWholeGameOver = false;
         private bool isHelpUsed = false;
         private bool isCurrentGameOver = false;
+
+        private Hangman()
+        {
+        }
 
         public bool IsCurrentGameOver
         {
@@ -29,7 +35,23 @@ namespace Hangman
             }
         }
 
-        private bool PlayOneGame()
+        public static Hangman GetHangman()
+        {
+            if (instance == null)
+            {
+                lock (syncRoot)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Hangman();
+                    }
+                }
+            }
+
+            return instance;
+        }
+
+        public bool PlayOneGame()
         {
             DisplayUtilities.PrintWelcomeMessage();
 
@@ -176,16 +198,6 @@ namespace Hangman
             }
 
             return suggestedLetter;
-        }
-
-        static void Main(string[] args)
-        {
-            Hangman hangman = new Hangman();
-            while (!hangman.IsCurrentGameOver)
-            {
-                hangman.IsCurrentGameOver = hangman.PlayOneGame();
-                Console.WriteLine();
-            }
         }
     }
 }

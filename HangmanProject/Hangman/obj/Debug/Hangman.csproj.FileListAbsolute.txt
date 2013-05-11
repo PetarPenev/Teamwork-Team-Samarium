@@ -16,3 +16,9 @@ C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProje
 C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.exe
 C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.pdb
 C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.exe
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.pdb
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.exe
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.pdb
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
