@@ -10,3 +10,6 @@ D:\Teamwork\HangmanProject\Hangman\obj\Debug\Hangman.pdb
 D:\Teamwork\HangmanProject\Hangman\bin\Debug\Hangman.exe
 D:\Teamwork\HangmanProject\Hangman\bin\Debug\Hangman.pdb
 D:\Teamwork\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.exe
+C:\Users\Administrator\Documents\MYDOWNLOADS\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.pdb
