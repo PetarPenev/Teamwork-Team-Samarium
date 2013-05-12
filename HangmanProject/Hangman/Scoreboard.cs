@@ -94,7 +94,7 @@ namespace Hangman
             return name;
         }
 
-        private string GetName()
+        protected virtual string GetName()
         {
             return Console.ReadLine();
         }
