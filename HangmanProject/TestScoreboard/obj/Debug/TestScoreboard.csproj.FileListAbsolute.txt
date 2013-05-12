@@ -1,0 +1,7 @@
+D:\Teamwork\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.dll
+D:\Teamwork\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.pdb
+D:\Teamwork\HangmanProject\TestScoreboard\bin\Debug\Hangman.exe
+D:\Teamwork\HangmanProject\TestScoreboard\bin\Debug\Hangman.pdb
+D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
+D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
+D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb

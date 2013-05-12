@@ -3,15 +3,27 @@ using System.Collections.Generic;
 
 namespace Hangman
 {
-    class Scoreboard
+    public class Scoreboard
     {
         private const int MAX_NUMBER_OF_HIGH_SCORE_ENTRIES = 5;
 
-        private List<KeyValuePair<String, int>> highScoreList;
+        protected List<KeyValuePair<String, int>> highScoreList;
+
+        public List<KeyValuePair<String, int>> HighScoreList
+        {
+            get {
+                return new List<KeyValuePair<String, int>>(this.highScoreList);
+            }
+
+            private set
+            { 
+                highScoreList = value;
+            }
+        }
 
         public Scoreboard()
         {
-            this.highScoreList = new List<KeyValuePair<String, int>>();
+            this.HighScoreList = new List<KeyValuePair<String, int>>();
         }
 
         public void TryToSignToScoreboard(int numberOfMistakesMade)
@@ -43,7 +55,7 @@ namespace Hangman
             return scoreQualifiesForTopFive;
         }
 
-        private void AddNewRecord(int numberOfMistakesMade)
+        protected void AddNewRecord(int numberOfMistakesMade)
         {
             if (highScoreList.Count == MAX_NUMBER_OF_HIGH_SCORE_ENTRIES)
             {
@@ -56,14 +68,14 @@ namespace Hangman
             SortRecordsAscendingByScore();
         }
 
-        private string AskForPlayerName()
+        protected string AskForPlayerName()
         {
             string name = String.Empty;
             bool inputIsAcceptable = false;
             while (!inputIsAcceptable)
             {
                 Console.Write("Please enter your name for the top scoreboard: ");
-                string line = Console.ReadLine();
+                string line = GetName();
                 if (line.Length == 0)
                 {
                     Console.WriteLine("You did not enter a name. Please, try again.");
@@ -80,6 +92,11 @@ namespace Hangman
             }
 
             return name;
+        }
+
+        private string GetName()
+        {
+            return Console.ReadLine();
         }
 
         private void DeleteTheWorstRecord()
