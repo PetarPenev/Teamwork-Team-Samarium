@@ -5,7 +5,7 @@ namespace Hangman
     public class Hangman
     {
         private static Hangman instance;
-        private static object syncRoot = new Object();
+        private static readonly object syncRoot = new Object();
         private readonly Scoreboard scoreboard = new Scoreboard();
         private readonly string[] words = new string[] 
         { 
@@ -149,14 +149,7 @@ namespace Hangman
                 bool wordIsRevealed = WordUtilities.CheckIfWordIsRevealed(displayableWord);
                 if (!wordIsRevealed)
                 {
-                    if (numberOfRevealedLetters == 1)
-                    {
-                        Console.WriteLine("Good job! You revealed {0} letter.", numberOfRevealedLetters);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Good job! You revealed {0} letters.", numberOfRevealedLetters);
-                    }
+                    Console.WriteLine("Good job! You revealed {0} letters.", numberOfRevealedLetters);
                 }
             }
             else

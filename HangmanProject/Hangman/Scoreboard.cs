@@ -5,13 +5,14 @@ namespace Hangman
 {
     public class Scoreboard
     {
-        private const int MAX_NUMBER_OF_HIGH_SCORE_ENTRIES = 5;
+        private const int MaxNumberOfHighScoreEntries = 5;
 
         protected List<KeyValuePair<String, int>> highScoreList;
 
         public List<KeyValuePair<String, int>> HighScoreList
         {
-            get {
+            get 
+            {
                 return new List<KeyValuePair<String, int>>(this.highScoreList);
             }
 
@@ -39,13 +40,13 @@ namespace Hangman
         private bool CheckIfScoreQualifiesForHighScoreList(int numberOfMistakesMade)
         {
             bool scoreQualifiesForTopFive = false;
-            if (highScoreList.Count < MAX_NUMBER_OF_HIGH_SCORE_ENTRIES)
+            if (highScoreList.Count < MaxNumberOfHighScoreEntries)
             {
                 scoreQualifiesForTopFive = true;
             }
             else
             {
-                int worstScoreInTopFive = highScoreList[MAX_NUMBER_OF_HIGH_SCORE_ENTRIES - 1].Value;
+                int worstScoreInTopFive = highScoreList[MaxNumberOfHighScoreEntries - 1].Value;
                 if (numberOfMistakesMade < worstScoreInTopFive)
                 {
                     scoreQualifiesForTopFive = true;
@@ -57,7 +58,7 @@ namespace Hangman
 
         protected void AddNewRecord(int numberOfMistakesMade)
         {
-            if (highScoreList.Count == MAX_NUMBER_OF_HIGH_SCORE_ENTRIES)
+            if (highScoreList.Count == MaxNumberOfHighScoreEntries)
             {
                 DeleteTheWorstRecord();
             }
