@@ -5,3 +5,10 @@ D:\Teamwork\HangmanProject\TestScoreboard\bin\Debug\Hangman.pdb
 D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
 D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
 D:\Teamwork\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.dll
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.pdb
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\Hangman.exe
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\Hangman.pdb
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
+C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb

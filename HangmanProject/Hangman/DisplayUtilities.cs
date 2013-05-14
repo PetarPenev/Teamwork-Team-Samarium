@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Hangman
 {
@@ -10,6 +8,17 @@ namespace Hangman
     {
         public static void HelpByRevealingALetter(string secretWord, char[] displayableWord)
         {
+            StringBuilder myBuilder = new StringBuilder();
+            foreach (var letter in displayableWord)
+            {
+                myBuilder.Append(letter);
+            }
+
+            if (secretWord == myBuilder.ToString())
+            {
+                throw new ArgumentException("secret word is already revealed");
+            }
+
             int nextUnrevealedLetterIndex = 0;
             for (int index = 0; index < displayableWord.Length; index++)
             {
@@ -19,6 +28,7 @@ namespace Hangman
                     break;
                 }
             }
+
             char letterToBeRevealed = secretWord[nextUnrevealedLetterIndex];
             for (int index = 0; index < secretWord.Length; index++)
             {
@@ -27,7 +37,9 @@ namespace Hangman
                     displayableWord[index] = letterToBeRevealed;
                 }
             }
+
             DisplayMessage(String.Format("OK, I reveal for you the next letter '{0}'.", letterToBeRevealed), true);
+            
         }
 
         public static void PrintInvalidEntryMessage()
@@ -37,6 +49,10 @@ namespace Hangman
 
         public static void PrintDisplayableWord(char[] displayableWord)
         {
+            if (displayableWord.Length < 1)
+            {
+                throw new ArgumentException("displayable word can't be empty array");
+            }
             DisplayMessage("The secret word is:", false);
             foreach (var letter in displayableWord)
             {
