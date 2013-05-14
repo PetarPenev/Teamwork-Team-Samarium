@@ -18,12 +18,25 @@ namespace Hangman
 
         public static char[] GenerateEmptyWordOfUnderscores(int wordLength)
         {
-            char[] wordOfUnderscores = new char[wordLength];
-            for (int index = 0; index < wordLength; index++)
+            if (wordLength <= 0)
             {
-                wordOfUnderscores[index] = '_';
+                throw new ArgumentOutOfRangeException("WordLength must be a positive number!");
             }
-            return wordOfUnderscores;
+
+            else if (wordLength > 50)
+            {
+                throw new ArgumentOutOfRangeException("There are no such long word(over 50 digits!)");
+            }
+
+            else
+            {
+                char[] wordOfUnderscores = new char[wordLength];
+                for (int index = 0; index < wordLength; index++)
+                {
+                    wordOfUnderscores[index] = '_';
+                }
+                return wordOfUnderscores;
+            }
         }
 
         public static bool CheckIfWordIsRevealed(char[] displayableWord)

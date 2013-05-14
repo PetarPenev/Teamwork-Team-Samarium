@@ -12,3 +12,10 @@ C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScorebo
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.dll
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\Hangman.exe
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\bin\Debug\Hangman.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb

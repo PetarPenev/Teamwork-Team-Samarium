@@ -15,7 +15,7 @@ namespace HungmanTest
         public void GenerateEmptyWordOfUnderscores_ForWordWithLength5WorkOk()
         {
             int numberOfCharecters = 5;
-            char[] actual=Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
+            char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
             char[] expected = new char[]
             {
                 '_','_','_','_','_'
@@ -41,6 +41,51 @@ namespace HungmanTest
             }
         }
 
+        // 50 is largest exceptable value for wordLength
+        [TestMethod]
+        public void GenerateEmptyWordOfUnderscores_ForWordWithLength50WorkOk()
+        {
+            int numberOfCharecters = 50;
+            char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
+            char[] expected = new char[]
+            {
+                '_','_','_','_','_','_','_','_','_','_',
+                '_','_','_','_','_','_','_','_','_','_',
+                '_','_','_','_','_','_','_','_','_','_',
+                '_','_','_','_','_','_','_','_','_','_',
+                '_','_','_','_','_','_','_','_','_','_'
+            };
+            for (int i = 0; i < numberOfCharecters; i++)
+            {
+                Assert.AreEqual(expected[i], actual[i]);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GenerateEmptyWordOfUnderscores_ForWordWithLengthMinus3_throwException()
+        {
+            int numberOfCharecters = -3;
+            char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GenerateEmptyWordOfUnderscores_ForWordWithLength0_throwException()
+        {
+            int numberOfCharecters = 0;
+            char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
+        }
+
+        // 51 must throw exceptio because 50 is larges acceptable wordLength
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GenerateEmptyWordOfUnderscores_ForWordWithLength51_throwException()
+        {
+            int numberOfCharecters = 51;
+            char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
+        }
+
         [TestMethod]
         public void SelectRandomWord_FrommyManName()
         {
@@ -49,7 +94,7 @@ namespace HungmanTest
             "Siabonga",
             "Nomwete"
         };
-            string actual=Hangman.WordUtilities.SelectRandomWord(myManName);
+            string actual = Hangman.WordUtilities.SelectRandomWord(myManName);
             bool itsWordFromMyManName = (actual == "Siabonga" || actual == "Nomwete");
             Assert.IsTrue(itsWordFromMyManName);
         }

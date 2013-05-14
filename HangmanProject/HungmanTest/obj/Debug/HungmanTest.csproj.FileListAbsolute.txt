@@ -19,3 +19,10 @@ C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\HungmanTest
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.csprojResolveAssemblyReference.cache
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.dll
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\bin\Debug\HungmanTest.dll
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\bin\Debug\HungmanTest.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\bin\Debug\Hangman.exe
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\bin\Debug\Hangman.pdb
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.csprojResolveAssemblyReference.cache
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.dll
+C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\HungmanTest\obj\Debug\HungmanTest.pdb
