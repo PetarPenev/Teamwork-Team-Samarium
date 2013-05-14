@@ -52,7 +52,7 @@ namespace Hangman
                 "'help' to cheat and 'exit' to quit the game.", true);
         }
 
-        private static void DisplayMessage(string message, bool addNewLine)
+        public static void DisplayMessage(string message, bool addNewLine)
         {
             if (addNewLine)
             {

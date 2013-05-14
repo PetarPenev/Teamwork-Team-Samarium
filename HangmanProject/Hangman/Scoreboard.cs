@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Hangman
 {
@@ -76,6 +77,11 @@ namespace Hangman
             {
                 Console.Write("Please enter your name for the top scoreboard: ");
                 string line = GetName();
+                if (line == null)
+                {
+                    throw new ArgumentNullException("The name was not initialized before passing.");
+                }
+
                 if (line.Length == 0)
                 {
                     Console.WriteLine("You did not enter a name. Please, try again.");
@@ -84,14 +90,32 @@ namespace Hangman
                 {
                     Console.WriteLine("The name you entered is too long. Please, enter a name up to 40 characters");
                 }
-                else
+                else if (!NameInList(line))
                 {
                     name = line;
                     inputIsAcceptable = true;
                 }
+                else
+                {
+                    Console.WriteLine("The name is already taken. Please choose a different one.");
+                }
             }
 
             return name;
+        }
+
+        private bool NameInList(string name)
+        {
+            Debug.Assert(!string.IsNullOrEmpty(name));
+            foreach (var position in this.highScoreList)
+            {
+                if (position.Key == name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         protected virtual string GetName()
