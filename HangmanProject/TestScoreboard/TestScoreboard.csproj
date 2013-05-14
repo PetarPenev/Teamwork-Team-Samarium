@@ -54,6 +54,7 @@
     <Compile Include="TestTryToSignToScoreboard.cs" />
     <Compile Include="TestConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScoreboardToString.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hangman\Hangman.csproj">

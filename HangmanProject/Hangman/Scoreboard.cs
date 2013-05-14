@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
 
 namespace Hangman
 {
@@ -141,10 +142,15 @@ namespace Hangman
 
         public void PrintCurrentScoreboard()
         {
-            Console.WriteLine("Scoreboard:");
+            DisplayUtilities.DisplayMessage(this.ToString(), true);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder scoreboardText = new StringBuilder("Scoreboard:" + Environment.NewLine);
             if (highScoreList.Count == 0)
             {
-                Console.WriteLine("There are no records in the scoreboard yet.");
+                scoreboardText.Append("There are no records in the scoreboard yet.");
             }
             else
             {
@@ -152,9 +158,13 @@ namespace Hangman
                 {
                     string name = highScoreList[index].Key;
                     int mistakes = highScoreList[index].Value;
-                    Console.WriteLine("{0}. {1} --> {2} mistakes", index + 1, name, mistakes);
+                    scoreboardText.AppendLine(string.Format("{0}. {1} --> {2} mistakes", index + 1, name, mistakes));
                 }
             }
+
+            var stringOfScoreboard = scoreboardText.ToString().TrimEnd('\r', '\n');
+            
+            return stringOfScoreboard;
         }
 
     }
