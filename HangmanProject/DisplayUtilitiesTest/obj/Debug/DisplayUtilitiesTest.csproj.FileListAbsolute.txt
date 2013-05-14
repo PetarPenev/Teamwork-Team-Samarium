@@ -5,3 +5,10 @@ C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProje
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.csprojResolveAssemblyReference.cache
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.dll
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.pdb
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.dll
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.pdb
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\bin\Debug\Hangman.exe
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\bin\Debug\Hangman.pdb
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.csprojResolveAssemblyReference.cache
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.dll
+D:\Teamwork\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.pdb

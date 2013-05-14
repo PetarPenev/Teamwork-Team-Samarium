@@ -1,13 +1,24 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Hangman;
-using System.Text;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="TestScoreboardToString.cs" company="Samarium">
+//     All rights reserved © Telerik Academy 2012-2013
+// </copyright>
+//-----------------------------------------------------------------------
 namespace TestScoreboard
 {
+    using System;
+    using System.Text;
+    using Hangman;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Testing the ToString method of the scoreboard.
+    /// </summary>
     [TestClass]
     public class TestScoreboardToString
     {
+        /// <summary>
+        /// Testing with an empty scoreboard.
+        /// </summary>
         [TestMethod]
         public void TestEmptyScoreboard()
         {
@@ -20,6 +31,9 @@ namespace TestScoreboard
             Assert.AreEqual(expectedContent, scoreboardContent);
         }
 
+        /// <summary>
+        ///  Testing with only one player signed to the scoreboard.
+        /// </summary>
         [TestMethod]
         public void TestOneMember()
         {
@@ -35,6 +49,9 @@ namespace TestScoreboard
             Assert.AreEqual(expectedContent, scoreboardContent);
         }
 
+        /// <summary>
+        /// Testing with a full scoreboard.
+        /// </summary>
         [TestMethod]
         public void TestFullScoreboard()
         {
@@ -63,6 +80,9 @@ namespace TestScoreboard
             Assert.AreEqual(expectedContent, scoreboardContent);
         }
 
+        /// <summary>
+        /// Testing with a full scoreboard that overflowed at some point.
+        /// </summary>
         [TestMethod]
         public void TestFullScoreboardWithOverflow()
         {
