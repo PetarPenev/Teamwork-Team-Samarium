@@ -54,6 +54,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="HelpByRevealingALetterTest.cs" />
+    <Compile Include="PrintInvalidEntryMessageTest.cs" />
+    <Compile Include="PrintWelcomeMessageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrintDisplayableWordTest.cs" />
   </ItemGroup>
