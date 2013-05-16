@@ -4,7 +4,6 @@ namespace Hangman
 {
     public class Hangman
     {
-        private static Hangman instance;
         private static readonly object syncRoot = new Object();
         private readonly Scoreboard scoreboard = new Scoreboard();
         private readonly string[] words = new string[] 
@@ -18,7 +17,7 @@ namespace Hangman
         private bool isHelpUsed = false;
         private bool isCurrentGameOver = false;
 
-        private Hangman()
+        public Hangman()
         {
         }
 
@@ -35,25 +34,6 @@ namespace Hangman
             }
         }
 
-        /// <summary>
-        /// Creates instance of Hangman if there isn't one created
-        /// </summary>
-        /// <returns>Returns instance of Hangman class</returns>
-        public static Hangman GetHangman()
-        {
-            if (instance == null)
-            {
-                lock (syncRoot)
-                {
-                    if (instance == null)
-                    {
-                        instance = new Hangman();
-                    }
-                }
-            }
-
-            return instance;
-        }
 
         /// <summary>
         /// Starts new game until user enter exit command
@@ -75,7 +55,7 @@ namespace Hangman
         {
             DisplayUtilities.PrintWelcomeMessage();
 
-            string randomWord = WordUtilities.SelectRandomWord(this.words);
+            string randomWord = this.GetWord();
             char[] displayableWord = WordUtilities.GenerateEmptyWordOfUnderscores(randomWord.Length);
             int numberOfMistakesMade = 0;
 
@@ -103,6 +83,15 @@ namespace Hangman
             }
 
             return this.isWholeGameOver;
+        }
+
+        /// <summary>
+        /// Returns a word that is to be guessed by the player.
+        /// </summary>
+        /// <returns>The word to be guessed.</returns>
+        protected virtual string GetWord()
+        {
+            return WordUtilities.SelectRandomWord(this.words);
         }
 
         /// <summary>

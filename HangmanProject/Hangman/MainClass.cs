@@ -7,7 +7,7 @@ namespace Hangman
     {
         static void Main(string[] args)
         {
-            Hangman hangman = Hangman.GetHangman();
+            Hangman hangman = new Hangman();
             hangman.Play();
         }
     }
