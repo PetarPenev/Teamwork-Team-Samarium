@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScoreboard", "TestScore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayUtilitiesTest", "DisplayUtilitiesTest\DisplayUtilitiesTest.csproj", "{7B6ADD1F-A022-402E-8180-D0EB411545D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C26D0B8B-15ED-4102-84D4-1588CC6A36BA}"
+	ProjectSection(SolutionItems) = preProject
+		Hangman-5-Team-Samarium.docx = Hangman-5-Team-Samarium.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
