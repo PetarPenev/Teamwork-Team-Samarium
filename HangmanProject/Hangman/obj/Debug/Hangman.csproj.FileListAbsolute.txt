@@ -28,3 +28,9 @@ C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProje
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.exe
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\Hangman\bin\Debug\Hangman.pdb
 C:\Telerik\КачественКод\TEAMWORK\Teamwork-Team-Samarium\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.exe.config
+D:\teamworkNew\HangmanProject\Hangman\obj\Debug\Hangman.exe
+D:\teamworkNew\HangmanProject\Hangman\obj\Debug\Hangman.pdb
+D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.exe
+D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.pdb
+D:\teamworkNew\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache

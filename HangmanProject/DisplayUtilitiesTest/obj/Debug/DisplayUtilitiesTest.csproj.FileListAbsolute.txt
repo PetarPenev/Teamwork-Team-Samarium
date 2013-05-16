@@ -19,3 +19,10 @@ C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\DisplayUtil
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.csprojResolveAssemblyReference.cache
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.dll
 C:\Users\Borislav\Source\Repos\Teamwork-Team-Samarium\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.pdb
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.dll
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.pdb
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\Hangman.exe
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\Hangman.pdb
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.csprojResolveAssemblyReference.cache
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.dll
+D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\obj\Debug\DisplayUtilitiesTest.pdb
