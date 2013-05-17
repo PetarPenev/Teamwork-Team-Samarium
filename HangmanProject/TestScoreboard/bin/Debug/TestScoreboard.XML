@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestScoreboard</name>
+    </assembly>
+    <members>
+        <member name="T:TestScoreboard.ScoreboardTestHelper">
+            <summary>
+            A helper class for testing the scoreboard.
+            </summary>
+        </member>
+        <member name="F:TestScoreboard.ScoreboardTestHelper.inputs">
+            <summary>
+            The list of inputs for player names.
+            </summary>
+        </member>
+        <member name="F:TestScoreboard.ScoreboardTestHelper.currentInput">
+            <summary>
+            The current member of the input we are passing as a name.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.ScoreboardTestHelper.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TestScoreboard.ScoreboardTestHelper"/> class.
+            </summary>
+            <param name="numberOfEntries">The maximum number of entries in the board.</param>
+        </member>
+        <member name="M:TestScoreboard.ScoreboardTestHelper.GetName">
+            <summary>
+            Overriding of a method to get a name so that we can use the names specified.
+            </summary>
+            <returns>A string of the player's name.</returns>
+        </member>
+        <member name="P:TestScoreboard.ScoreboardTestHelper.Inputs">
+            <summary>
+            Gets or sets the names of the players.
+            </summary>
+        </member>
+        <member name="T:TestScoreboard.TestTryToSignToScoreboard">
+            <summary>
+            Testing the signing method of the scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigning">
+            <summary>
+            Testing with single signing.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithoutRemoval">
+            <summary>
+            Testing with signings without removing players.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithOneRemoval">
+            <summary>
+            Testing with singings with one player removed in the process.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithThreeRemovals">
+            <summary>
+            Testing with three removed players in the process.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithEmptyName">
+            <summary>
+            Testing with an empty name.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithNull">
+            <summary>
+            Testing with a null signing.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithTooLongName">
+            <summary>
+            Testing with too long a name.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithoutQualifing">
+            <summary>
+            Test signing with records that overflow and do not qualify.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestTryToSignToScoreboard.TestScoreboardSigningWithDuplicateNames">
+            <summary>
+            Test signing with duplicate names.
+            </summary>
+        </member>
+        <member name="T:TestScoreboard.TestConstructor">
+            <summary>
+            A class that tests the constructor of the scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestConstructor.TestConstructorOfScoreboard">
+            <summary>
+            Testing the constructor of the scoreboard.
+            </summary>
+        </member>
+        <member name="T:TestScoreboard.TestScoreboardToString">
+            <summary>
+            Testing the ToString method of the scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestScoreboardToString.TestEmptyScoreboard">
+            <summary>
+            Testing with an empty scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestScoreboardToString.TestOneMember">
+            <summary>
+             Testing with only one player signed to the scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestScoreboardToString.TestFullScoreboard">
+            <summary>
+            Testing with a full scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestScoreboard.TestScoreboardToString.TestFullScoreboardWithOverflow">
+            <summary>
+            Testing with a full scoreboard that overflowed at some point.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,3 +5,5 @@ D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.exe
 D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.pdb
 D:\teamworkNew\HangmanProject\TestHangman\obj\Debug\TestHangman.dll
 D:\teamworkNew\HangmanProject\TestHangman\obj\Debug\TestHangman.pdb
+D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\TestHangman.XML
+D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.xml

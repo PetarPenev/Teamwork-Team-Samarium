@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DisplayUtilitiesTest</name>
+    </assembly>
+    <members>
+        <member name="T:DisplayUtilitiesTest.RevealALetterTest">
+            <summary>
+            Testing the RevealALetter method.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.RevealALetterTest.TestWithNoRevealedCharacters">
+            <summary>
+            Test the method with no revealed characters.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.RevealALetterTest.TestWithSecondCharacterRevealed">
+            <summary>
+            Testing the method with the second character revealed.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.RevealALetterTest.TestWithFirstTwoWordsRevealed">
+            <summary>
+            Testing the method with two characters revealed.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.RevealALetterTest.TestWithAllCharactersRevealed">
+            <summary>
+            Testing the method when there are no characters to be revealed.
+            </summary>
+        </member>
+        <member name="T:DisplayUtilitiesTest.PrintInvalidEntryMessageTest">
+            <summary>
+            Testing the PrintingInvalidEntryMessage method.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.PrintInvalidEntryMessageTest.PrintInvalidEntryMessage">
+            <summary>
+            Actual test of the method.
+            </summary>
+        </member>
+        <member name="T:DisplayUtilitiesTest.PrintWelcomeMessageTest">
+            <summary>
+            Testing the PrintWelcomeMessage method.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.PrintWelcomeMessageTest.PrintWelcomeMessage">
+            <summary>
+            Actual test of the method.
+            </summary>
+        </member>
+        <member name="T:DisplayUtilitiesTest.PrintDisplayableWordTest">
+            <summary>
+            Test the PrintDisplayableWord method.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.PrintDisplayableWordTest.TestWithThreeLetters">
+            <summary>
+            Test the method with three-letter word.
+            </summary>
+        </member>
+        <member name="M:DisplayUtilitiesTest.PrintDisplayableWordTest.TestWithEmtyArray">
+            <summary>
+            Test with an argument exception.
+            </summary>
+        </member>
+    </members>
+</doc>

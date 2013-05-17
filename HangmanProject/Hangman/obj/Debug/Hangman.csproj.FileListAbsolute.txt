@@ -34,3 +34,4 @@ D:\teamworkNew\HangmanProject\Hangman\obj\Debug\Hangman.pdb
 D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.exe
 D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.pdb
 D:\teamworkNew\HangmanProject\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.XML

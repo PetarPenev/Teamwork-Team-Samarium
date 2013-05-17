@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestHangman</name>
+    </assembly>
+    <members>
+        <member name="M:TestHangman.HangmanHelper.#ctor(System.String[],System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TestHangman.HangmanHelper"/> class.
+            </summary>
+            <param name="arrayOfWords">The array of words to be passed.</param>
+            <param name="numberOfGames">The number of Hangman games to be played.</param>
+        </member>
+        <member name="T:TestHangman.TestHangman">
+            <summary>
+            Testing the Hangman class (via HangmanHelper).
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithOneLetterWordCorrectGuess">
+            <summary>
+            Testing with one-letter word and only correct guesses.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithSevenLetterWordThreeIncorrectGuesses">
+            <summary>
+            Testing with one word and three incorrect guesses.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithNineLetterWordThreeIncorrectGuessesWithHelp">
+            <summary>
+            Testing with incorrect guesses and help.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithTwoGames">
+            <summary>
+            Testing with 2 games.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithFiveGames">
+            <summary>
+            Testing with 5 games.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithSevenGames">
+            <summary>
+            Testing with 7 games and changes in scoreboard.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithTopCommand">
+            <summary>
+            Testing with the top command.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithRestartCommand">
+            <summary>
+            Testing with the restart command.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithHelpUsed">
+            <summary>
+            Testing with help used.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithInvalidCommands">
+            <summary>
+            Testing with invalid commands.
+            </summary>
+        </member>
+        <member name="M:TestHangman.TestHangman.TestWithExit">
+            <summary>
+            Testing with the exit command.
+            </summary>
+        </member>
+    </members>
+</doc>

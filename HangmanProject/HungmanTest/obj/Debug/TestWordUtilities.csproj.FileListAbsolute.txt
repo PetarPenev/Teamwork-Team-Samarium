@@ -5,3 +5,5 @@ D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\Hangman.pdb
 D:\teamworkNew\HangmanProject\HungmanTest\obj\Debug\HungmanTest.dll
 D:\teamworkNew\HangmanProject\HungmanTest\obj\Debug\HungmanTest.pdb
 D:\teamworkNew\HangmanProject\HungmanTest\obj\Debug\TestWordUtilities.csprojResolveAssemblyReference.cache
+D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\HungmanTest.XML
+D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\Hangman.xml

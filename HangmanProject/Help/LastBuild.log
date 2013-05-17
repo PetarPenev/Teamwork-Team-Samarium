@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.7.0" projectFile="D:\teamworkNew\HangmanProject\HangmanDocumentation.shfbproj" started="17.5.2013 г. 05:43:14 ч.">
+<buildStep step="Initializing">
+Finding tools...
+Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.dll
+    Found assembly &#39;D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.dll&#39;
+Source: D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.xml
+Source: D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.exe
+    Found assembly &#39;D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.exe&#39;
+Source: D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.exe
+    Found assembly &#39;D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.exe&#39;
+Source: D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.exe
+    Found assembly &#39;D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.exe&#39;
+Source: D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.XML
+Source: D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.xml
+Source: D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.xml
+Source: D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\HungmanTest.dll
+    Found assembly &#39;D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\HungmanTest.dll&#39;
+Source: D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\HungmanTest.xml
+
+Copying XML comments files
+    D:\teamworkNew\HangmanProject\DisplayUtilitiesTest\bin\Debug\DisplayUtilitiesTest.XML -&gt; D:\teamworkNew\HangmanProject\Help\Working\DisplayUtilitiesTest.XML
+    D:\teamworkNew\HangmanProject\Hangman\bin\Debug\Hangman.XML -&gt; D:\teamworkNew\HangmanProject\Help\Working\Hangman.XML
+SHFB: Warning BE0063: &#39;D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.xml&#39; matches a previously copied comments filename.  The duplicate will be copied to a unique name to preserve the comments it contains.
+    D:\teamworkNew\HangmanProject\TestHangman\bin\Debug\Hangman.xml -&gt; D:\teamworkNew\HangmanProject\Help\Working\{cd409409-3fdc-4198-a95e-68e647d7271f}
+SHFB: Warning BE0063: &#39;D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.xml&#39; matches a previously copied comments filename.  The duplicate will be copied to a unique name to preserve the comments it contains.
+    D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.xml -&gt; D:\teamworkNew\HangmanProject\Help\Working\{6dc0fe8d-f4fa-4bc6-808e-e5b159d5e35b}
+    D:\teamworkNew\HangmanProject\HungmanTest\bin\Debug\HungmanTest.XML -&gt; D:\teamworkNew\HangmanProject\Help\Working\HungmanTest.XML
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+    Last step completed in 00:00:00.2200
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0100
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  MRefBuilder (v2.7.3.0)
+  Copyright c 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Loaded 5 assemblies for reflection and 1 dependency assemblies.
+  
+  Unhandled Exception: System.ArgumentException: An item with the same key has already been added.
+     at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+     at Microsoft.Ddue.Tools.ManagedReflectionWriter.VisitNamespaces(NamespaceList spaces)
+     at Microsoft.Ddue.Tools.Reflection.ApiVisitor.VisitApis()
+     at Microsoft.Ddue.Tools.MRefBuilder.Main(String[] args)
+D:\teamworkNew\HangmanProject\Help\Working\GenerateRefInfo.proj(48,5): error MSB6006: &quot;MRefBuilder.exe&quot; exited with code -532462766.
+    Last step completed in 00:00:14.5300
+</buildStep>
+<buildStep step="Failed">
+
+SHFB: Error BE0043: Unexpected error detected in last build step.  See output above for details.
+
+</buildStep>
+</shfbBuild>

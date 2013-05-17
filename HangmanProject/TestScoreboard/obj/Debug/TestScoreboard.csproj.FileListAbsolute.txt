@@ -26,3 +26,5 @@ D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.pdb
 D:\teamworkNew\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.csprojResolveAssemblyReference.cache
 D:\teamworkNew\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.dll
 D:\teamworkNew\HangmanProject\TestScoreboard\obj\Debug\TestScoreboard.pdb
+D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\TestScoreboard.XML
+D:\teamworkNew\HangmanProject\TestScoreboard\bin\Debug\Hangman.xml

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HungmanTest</name>
+    </assembly>
+    <members>
+        <member name="T:HangmanTest.TestWordUtilities">
+            <summary>
+            Tests the word utilities class.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthThree">
+            <summary>
+            Tests the GenerateEmptyUnderscores method with 3-letter word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthFive">
+            <summary>
+            Tests the GenerateEmptyUnderscores method with 5-letter word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLimitValue">
+            <summary>
+            Tests the method with the limit value of 50.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForNegativeLength">
+            <summary>
+            Tests the method with a negative length for the word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthZero">
+            <summary>
+            Tests the method with length 0.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthFiftyOne">
+            <summary>
+            Tests the method with a length longer than the acceptable max length.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.SelectRandomWordRandomName">
+            <summary>
+            Tests with an array of a random name.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.CheckIfWordIsRevealedNotRevealedWord">
+            <summary>
+            Checks the method with a partially revealed word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.CheckIfWordIsRevealedWithRevealedWord">
+            <summary>
+            Checks the method with a revealed word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.CheckUserGuessPresentUnrevealedLetterAllCaps">
+            <summary>
+            Checks the user guess in case of a present unrevealed letter.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.CheckUserGuessAlreadyRevealedLetter">
+            <summary>
+            Checks the user guess in case of already revealed letter.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.CheckUserGuessNotPresentLetter">
+            <summary>
+            Checks the user guess in case of a non-present letter.
+            </summary>
+        </member>
+    </members>
+</doc>
