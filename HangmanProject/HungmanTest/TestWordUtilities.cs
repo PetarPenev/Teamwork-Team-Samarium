@@ -1,12 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-// Започнах тези унит тестове защото са по лесни и по разбирам какво става днес до 12.00(11 май) правя каквото правя а после ако искате го променяите
-// ако искате триите каквото съм направил. Аз приключвам и почвам да се занимавам с изпита след изпита вечерта на 15 и 16 май целия съм на линия 
-// ако трябва ще остана в София , може и да се съберем в телерика  заедно та да не стават конфликти моля ако може тогава да свършим работата ако не ви
-// се чака до последния момент разбирам. 
-
-namespace HungmanTest
+namespace HangmanTest
 {
     [TestClass]
     public class TestWordUtilities
@@ -162,7 +157,5 @@ namespace HungmanTest
             int expected = 0;
             Assert.AreEqual(expected, actual);
         }
-
-        // CheckIfLetterIsAlreadyRevealed(string suggestedLetter, char[] displayableWord) is PRIVATE така че не му правя тестове.
     }
 }

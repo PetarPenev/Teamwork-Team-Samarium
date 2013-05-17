@@ -6,6 +6,8 @@ namespace TestHangman
     {
         private string[] wordsArray;
 
+        private int currentWord;
+
         public string[] WordsArray
         {
             get { 
@@ -24,12 +26,15 @@ namespace TestHangman
 
         protected override string GetWord()
         {
-            return Hangman.WordUtilities.SelectRandomWord(this.wordsArray);
+            string word = this.wordsArray[this.currentWord];
+            currentWord++;
+            return word;
         }
 
-        public HangmanHelper(string[] arrayOfWords)
+        public HangmanHelper(string[] arrayOfWords, int numberOfGames) : base(numberOfGames)
         {
             this.WordsArray = arrayOfWords;
+            this.currentWord = 0;
         }
     }
 }

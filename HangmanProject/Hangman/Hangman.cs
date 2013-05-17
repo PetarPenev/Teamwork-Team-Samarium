@@ -5,7 +5,9 @@ namespace Hangman
     public class Hangman
     {
         private static readonly object syncRoot = new Object();
-        private readonly Scoreboard scoreboard = new Scoreboard();
+        public readonly Scoreboard scoreboard = new Scoreboard();
+        private int numberOfGames;
+        private int maxNumberOfGames;
         private readonly string[] words = new string[] 
         { 
             "computer", "programmer", "software", "debugger", "compiler", 
@@ -17,8 +19,10 @@ namespace Hangman
         private bool isHelpUsed = false;
         private bool isCurrentGameOver = false;
 
-        public Hangman()
+        public Hangman(int maxNumberOfGames)
         {
+            this.numberOfGames = 0;
+            this.maxNumberOfGames = maxNumberOfGames;
         }
 
         public bool IsCurrentGameOver
@@ -44,6 +48,10 @@ namespace Hangman
             {
                 this.IsCurrentGameOver = this.NewGame();
                 Console.WriteLine();
+                if (this.numberOfGames == this.maxNumberOfGames)
+                {
+                    this.IsCurrentGameOver = true;
+                }
             }
         }
 
@@ -82,6 +90,7 @@ namespace Hangman
                 }
             }
 
+            this.numberOfGames++;
             return this.isWholeGameOver;
         }
 
