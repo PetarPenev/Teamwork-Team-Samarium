@@ -12,7 +12,7 @@
         </member>
         <member name="M:Hangman.DisplayUtilities.RevealALetter(System.String,System.Char[])">
             <summary>
-            Displays the currently revealed part of the word.
+            Reveals a letter.
             </summary>
             <param name="secretWord">The full word.</param>
             <param name="displayableWord">The characters to be displayed.</param>

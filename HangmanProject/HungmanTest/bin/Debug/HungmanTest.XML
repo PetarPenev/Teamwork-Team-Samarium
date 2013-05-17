@@ -9,14 +9,14 @@
             Tests the word utilities class.
             </summary>
         </member>
-        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthThree">
-            <summary>
-            Tests the GenerateEmptyUnderscores method with 3-letter word.
-            </summary>
-        </member>
         <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthFive">
             <summary>
             Tests the GenerateEmptyUnderscores method with 5-letter word.
+            </summary>
+        </member>
+        <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLengthThree">
+            <summary>
+            Tests the GenerateEmptyUnderscores method with 3-letter word.
             </summary>
         </member>
         <member name="M:HangmanTest.TestWordUtilities.GenerateEmptyWordOfUnderscoresForLimitValue">

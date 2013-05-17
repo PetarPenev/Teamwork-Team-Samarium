@@ -16,7 +16,7 @@ namespace Hangman
     public static class DisplayUtilities
     {
         /// <summary>
-        /// Displays the currently revealed part of the word.
+        /// Reveals a letter.
         /// </summary>
         /// <param name="secretWord">The full word.</param>
         /// <param name="displayableWord">The characters to be displayed.</param>

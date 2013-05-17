@@ -15,10 +15,10 @@ namespace HangmanTest
     public class TestWordUtilities
     {
         /// <summary>
-        /// Tests the GenerateEmptyUnderscores method with 3-letter word.
+        /// Tests the GenerateEmptyUnderscores method with 5-letter word.
         /// </summary>
         [TestMethod]
-        public void GenerateEmptyWordOfUnderscoresForLengthThree()
+        public void GenerateEmptyWordOfUnderscoresForLengthFive()
         {
             int numberOfCharecters = 5;
             char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);
@@ -33,10 +33,10 @@ namespace HangmanTest
         }
 
         /// <summary>
-        /// Tests the GenerateEmptyUnderscores method with 5-letter word.
+        /// Tests the GenerateEmptyUnderscores method with 3-letter word.
         /// </summary>
         [TestMethod]
-        public void GenerateEmptyWordOfUnderscoresForLengthFive()
+        public void GenerateEmptyWordOfUnderscoresForLengthThree()
         {
             int numberOfCharecters = 3;
             char[] actual = Hangman.WordUtilities.GenerateEmptyWordOfUnderscores(numberOfCharecters);

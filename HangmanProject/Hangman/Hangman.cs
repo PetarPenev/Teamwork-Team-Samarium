@@ -69,7 +69,7 @@ namespace Hangman
             while (!this.IsCurrentGameOver)
             {
                 this.IsCurrentGameOver = this.NewGame();
-                Console.WriteLine();
+                DisplayUtilities.DisplayMessage("", true);
                 if (this.numberOfGames == this.maxNumberOfGames)
                 {
                     this.IsCurrentGameOver = true;
@@ -139,13 +139,13 @@ namespace Hangman
             {
                 if (helpIsUsed)
                 {
-                    Console.WriteLine("You won with {0} mistakes but you have cheated. " +
-                        "You are not allowed to enter into the scoreboard.", numberOfMistakesMade);
+                    DisplayUtilities.DisplayMessage(string.Format("You won with {0} mistakes but you have cheated. " +
+                        "You are not allowed to enter into the scoreboard.", numberOfMistakesMade), true);
                     DisplayUtilities.PrintDisplayableWord(displayableWord);
                 }
                 else
                 {
-                    Console.WriteLine("You won with {0} mistakes.", numberOfMistakesMade);
+                    DisplayUtilities.DisplayMessage(string.Format("You won with {0} mistakes.", numberOfMistakesMade), true);
                     DisplayUtilities.PrintDisplayableWord(displayableWord);
                     this.scoreboard.TryToSignToScoreboard(numberOfMistakesMade);
                 }
@@ -172,7 +172,7 @@ namespace Hangman
                     this.isWholeGameOver = false;
                     break;
                 case "exit":
-                    Console.WriteLine("Goodbye!");
+                    DisplayUtilities.DisplayMessage("Goodbye!", false);
                     this.isGameWon = true;
                     this.isWholeGameOver = true;
                     break;
@@ -200,12 +200,12 @@ namespace Hangman
                 bool wordIsRevealed = WordUtilities.CheckIfWordIsRevealed(displayableWord);
                 if (!wordIsRevealed)
                 {
-                    Console.WriteLine("Good job! You revealed {0} letters.", numberOfRevealedLetters);
+                    DisplayUtilities.DisplayMessage(string.Format("Good job! You revealed {0} letters.", numberOfRevealedLetters), true);
                 }
             }
             else
             {
-                Console.WriteLine("Sorry! There are no unrevealed letters \"{0}\".", suggestedLetter[0]);
+                DisplayUtilities.DisplayMessage(string.Format("Sorry! There are no unrevealed letters \"{0}\".", suggestedLetter[0]), true);
                 numberOfMistakesMade++;
             }
         }
@@ -220,7 +220,7 @@ namespace Hangman
             bool correctInputIsTaken = false;
             while (!correctInputIsTaken)
             {
-                Console.Write("Enter your guess or command: ");
+                DisplayUtilities.DisplayMessage("Enter your guess or command: ", true);
                 string inputLine = Console.ReadLine();
                 inputLine = inputLine.ToLower();
                 InputType inputType = this.GetInputType(inputLine);
