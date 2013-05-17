@@ -1,13 +1,24 @@
-﻿using System;
-using System.IO;
-using Hangman;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrintWelcomeMessageTest.cs" company="Samarium">
+//     All rights reserved © Telerik Academy 2012-2013
+// </copyright>
+//----------------------------------------------------------------------
 namespace DisplayUtilitiesTest
 {
+    using System;
+    using System.IO;
+    using Hangman;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Testing the PrintWelcomeMessage method.
+    /// </summary>
     [TestClass]
     public class PrintWelcomeMessageTest
     {
+        /// <summary>
+        /// Actual test of the method.
+        /// </summary>
         [TestMethod]
         public void PrintWelcomeMessage()
         {

@@ -20,7 +20,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigning()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.TryToSignToScoreboard(5);
 
             Assert.AreEqual(1, scoreboard.HighScoreList.Count);
@@ -32,7 +32,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithoutRemoval()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.TryToSignToScoreboard(5);
             scoreboard.TryToSignToScoreboard(3);
             scoreboard.TryToSignToScoreboard(2);
@@ -48,7 +48,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithOneRemoval()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.TryToSignToScoreboard(5);
             scoreboard.TryToSignToScoreboard(3);
             scoreboard.TryToSignToScoreboard(2);
@@ -65,7 +65,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithThreeRemovals()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.TryToSignToScoreboard(7);
             scoreboard.TryToSignToScoreboard(6);
             scoreboard.TryToSignToScoreboard(2);
@@ -84,7 +84,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithEmptyName()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player", string.Empty, "Player2" };
             scoreboard.TryToSignToScoreboard(7);
             scoreboard.TryToSignToScoreboard(6);            
@@ -105,7 +105,7 @@ namespace TestScoreboard
         [ExpectedException(typeof(ArgumentNullException))]
         public void TestScoreboardSigningWithNull()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player", null, "Player2" };
             scoreboard.TryToSignToScoreboard(7);
             scoreboard.TryToSignToScoreboard(6);
@@ -125,7 +125,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithTooLongName()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player", "TooLongANameToBePassedAsAnArgumentSoTheNextOneWillBe", 
                 "Player2" };
             scoreboard.TryToSignToScoreboard(7);
@@ -146,7 +146,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithoutQualifing()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player 0", "Player 1", "Player 2", "Player 3",
                 "Player 4", "Player 5", "Player 6", "Player 7", "Player 8" };
 
@@ -179,7 +179,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestScoreboardSigningWithDuplicateNames()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player 0", "Duplicate", "Duplicate", "Player 1" };
 
             scoreboard.TryToSignToScoreboard(2);

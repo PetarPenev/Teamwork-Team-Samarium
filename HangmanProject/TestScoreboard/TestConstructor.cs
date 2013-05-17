@@ -21,7 +21,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestConstructorOfScoreboard()
         {
-            Scoreboard board = new Scoreboard();
+            Scoreboard board = new Scoreboard(5);
             Assert.AreEqual(board.HighScoreList.Count, 0);
         }
     }

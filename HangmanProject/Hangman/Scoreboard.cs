@@ -18,18 +18,21 @@ namespace Hangman
         /// <summary>
         /// Specifies the number of entries in the board.
         /// </summary>
-        private const int MaxNumberOfHighScoreEntries = 5; 
+        private int maxNumberOfHighScoreEntries = 5; 
 
         /// <summary>
         /// The list containing the players and the number of their mistakes.
         /// </summary>
-        private List<KeyValuePair<string, int>> highScoreList;              
+        private List<KeyValuePair<string, int>> highScoreList;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Scoreboard" /> class.
         /// </summary>
-        public Scoreboard()
+        /// <param name="numberOfEntriesSaved">The number of entries saved
+        /// in the scoreboard instance.</param>
+        public Scoreboard(int numberOfEntriesSaved)
         {
+            this.maxNumberOfHighScoreEntries = numberOfEntriesSaved;
             this.HighScoreList = new List<KeyValuePair<string, int>>();
         }
 
@@ -163,7 +166,7 @@ namespace Hangman
         /// <param name="numberOfMistakesMade">The number of mistakes made by the player.</param>
         private void AddNewRecord(int numberOfMistakesMade)
         {
-            if (this.highScoreList.Count == MaxNumberOfHighScoreEntries)
+            if (this.highScoreList.Count == this.maxNumberOfHighScoreEntries)
             {
                 this.DeleteTheWorstRecord();
             }
@@ -182,13 +185,13 @@ namespace Hangman
         private bool CheckIfScoreQualifiesForHighScoreList(int numberOfMistakesMade)
         {
             bool scoreQualifiesForTopFive = false;
-            if (this.highScoreList.Count < MaxNumberOfHighScoreEntries)
+            if (this.highScoreList.Count < this.maxNumberOfHighScoreEntries)
             {
                 scoreQualifiesForTopFive = true;
             }
             else
             {
-                int worstScoreInTopFive = this.highScoreList[MaxNumberOfHighScoreEntries - 1].Value;
+                int worstScoreInTopFive = this.highScoreList[this.maxNumberOfHighScoreEntries - 1].Value;
                 if (numberOfMistakesMade < worstScoreInTopFive)
                 {
                     scoreQualifiesForTopFive = true;

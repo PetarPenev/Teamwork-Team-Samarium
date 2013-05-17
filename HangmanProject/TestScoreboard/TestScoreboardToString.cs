@@ -22,7 +22,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestEmptyScoreboard()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
 
             string scoreboardContent = scoreboard.ToString();
             string expectedContent = "Scoreboard:" + Environment.NewLine + 
@@ -37,7 +37,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestOneMember()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player 0", "Player 1", "Player 2", "Player 3" };
 
             scoreboard.TryToSignToScoreboard(4);
@@ -55,7 +55,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestFullScoreboard()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player 0", "Player 1", "Player 2", 
                 "Player 3", "Player 4", "Player 5" };
 
@@ -86,7 +86,7 @@ namespace TestScoreboard
         [TestMethod]
         public void TestFullScoreboardWithOverflow()
         {
-            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper();
+            ScoreboardTestHelper scoreboard = new ScoreboardTestHelper(5);
             scoreboard.Inputs = new string[] { "Player 0", "Player 1", "Player 2", 
                 "Player 3", "Player 4", "Player 5", "Player 6", "Player 7" };
 

@@ -1,30 +1,53 @@
-﻿using System;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="Hangman.cs" company="Samarium">
+//     All rights reserved © Telerik Academy 2012-2013
+// </copyright>
+//----------------------------------------------------------------------
 namespace Hangman
 {
+    using System;
+
+    /// <summary>
+    /// The main class for the Hangman game.
+    /// </summary>
     public class Hangman
     {
-        private static readonly object syncRoot = new Object();
-        public readonly Scoreboard scoreboard = new Scoreboard();
-        private int numberOfGames;
-        private int maxNumberOfGames;
+        private readonly Scoreboard scoreboard = new Scoreboard(5);
         private readonly string[] words = new string[] 
         { 
             "computer", "programmer", "software", "debugger", "compiler", 
             "developer", "algorithm", "array", "method", "variable"
         };
 
+        private int numberOfGames;
+        private int maxNumberOfGames;
+        
         private bool isGameWon = false;
         private bool isWholeGameOver = false;
         private bool isHelpUsed = false;
         private bool isCurrentGameOver = false;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Hangman"/> class.
+        /// </summary>
+        /// <param name="maxNumberOfGames">The number of games to be played.</param>
         public Hangman(int maxNumberOfGames)
         {
             this.numberOfGames = 0;
             this.maxNumberOfGames = maxNumberOfGames;
         }
 
+        /// <summary>
+        /// Gets an instance of the scoreboard.
+        /// </summary>
+        public Scoreboard Scoreboard
+        {
+            get { return this.scoreboard; }
+        } 
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is finished.
+        /// </summary>
         public bool IsCurrentGameOver
         {
             get
@@ -37,7 +60,6 @@ namespace Hangman
                 this.isCurrentGameOver = value;
             }
         }
-
 
         /// <summary>
         /// Starts new game until user enter exit command
@@ -53,6 +75,15 @@ namespace Hangman
                     this.IsCurrentGameOver = true;
                 }
             }
+        }
+
+        /// <summary>
+        /// Returns a word that is to be guessed by the player.
+        /// </summary>
+        /// <returns>The word to be guessed.</returns>
+        protected virtual string GetWord()
+        {
+            return WordUtilities.SelectRandomWord(this.words);
         }
 
         /// <summary>
@@ -74,7 +105,7 @@ namespace Hangman
             {
                 DisplayUtilities.PrintDisplayableWord(displayableWord);
                 string userInput = this.GetUserInput();
-                InputType inputType = GetInputType(userInput);
+                InputType inputType = this.GetInputType(userInput);
                 if (inputType == InputType.Letter)
                 {
                     this.ProcessUserGuess(userInput, randomWord, displayableWord, ref numberOfMistakesMade);
@@ -92,15 +123,6 @@ namespace Hangman
 
             this.numberOfGames++;
             return this.isWholeGameOver;
-        }
-
-        /// <summary>
-        /// Returns a word that is to be guessed by the player.
-        /// </summary>
-        /// <returns>The word to be guessed.</returns>
-        protected virtual string GetWord()
-        {
-            return WordUtilities.SelectRandomWord(this.words);
         }
 
         /// <summary>
@@ -155,7 +177,7 @@ namespace Hangman
                     this.isWholeGameOver = true;
                     break;
                 case "help":
-                    DisplayUtilities.HelpByRevealingALetter(secretWord, displayableWord);
+                    DisplayUtilities.RevealALetter(secretWord, displayableWord);
                     this.isHelpUsed = true;
                     break;
                 default:
@@ -194,14 +216,14 @@ namespace Hangman
         /// <returns>Correct user input</returns>
         private string GetUserInput()
         {
-            string userInput = String.Empty;
+            string userInput = string.Empty;
             bool correctInputIsTaken = false;
             while (!correctInputIsTaken)
             {
                 Console.Write("Enter your guess or command: ");
                 string inputLine = Console.ReadLine();
                 inputLine = inputLine.ToLower();
-                InputType inputType = GetInputType(inputLine);
+                InputType inputType = this.GetInputType(inputLine);
                 if (inputType == InputType.Letter || inputType == InputType.Command)
                 {
                     userInput = inputLine;

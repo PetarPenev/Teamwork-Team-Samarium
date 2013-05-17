@@ -1,13 +1,8 @@
 <StyleCopSettings Version="105">
   <Analyzers>
-    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+    <Analyzer AnalyzerId="StyleCop.CSharp.LayoutRules">
       <Rules>
-        <Rule Name="SplitParametersMustStartOnLineAfterDeclaration">
-          <RuleSettings>
-            <BooleanProperty Name="Enabled">False</BooleanProperty>
-          </RuleSettings>
-        </Rule>
-        <Rule Name="ParameterMustFollowComma">
+        <Rule Name="CurlyBracketsForMultiLineStatementsMustNotShareLine">
           <RuleSettings>
             <BooleanProperty Name="Enabled">False</BooleanProperty>
           </RuleSettings>

@@ -27,7 +27,8 @@ namespace TestScoreboard
         /// <summary>
         /// Initializes a new instance of the <see cref="ScoreboardTestHelper"/> class.
         /// </summary>
-        public ScoreboardTestHelper()
+        /// <param name="numberOfEntries">The maximum number of entries in the board.</param>
+        public ScoreboardTestHelper(int numberOfEntries) : base(numberOfEntries)
         {
             this.HighScoreList = new List<KeyValuePair<string, int>>();
         }

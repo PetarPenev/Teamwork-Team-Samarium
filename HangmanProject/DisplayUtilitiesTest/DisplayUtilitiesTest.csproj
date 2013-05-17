@@ -53,7 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="HelpByRevealingALetterTest.cs" />
+    <Compile Include="RevealALetterTest.cs" />
     <Compile Include="PrintInvalidEntryMessageTest.cs" />
     <Compile Include="PrintWelcomeMessageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

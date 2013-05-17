@@ -1,13 +1,24 @@
-﻿using System;
-using System.IO;
-using Hangman;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿//-----------------------------------------------------------------------
+// <copyright file="PrintInvalidEntryMessageTest.cs" company="Samarium">
+//     All rights reserved © Telerik Academy 2012-2013
+// </copyright>
+//----------------------------------------------------------------------
 namespace DisplayUtilitiesTest
 {
+    using System;
+    using System.IO;
+    using Hangman;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Testing the PrintingInvalidEntryMessage method.
+    /// </summary>
     [TestClass]
     public class PrintInvalidEntryMessageTest
     {
+        /// <summary>
+        /// Actual test of the method.
+        /// </summary>
         [TestMethod]
         public void PrintInvalidEntryMessage()
         {
